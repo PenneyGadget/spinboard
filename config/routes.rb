@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  get "/", to: "welcome#index"
+  root to: "welcome#index"
+
+  resources :links, only: [:index]
+
+  resources :users, only: [:new, :create]
 end
