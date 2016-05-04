@@ -1,0 +1,22 @@
+body {
+  background-color: #391326;
+}
+
+.landing-page {
+  margin-top: 200px;
+}
+
+#landing-text {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2.5em;
+  color: #b38600;
+}
+
+.login-text, .signup-text {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  font-size: 2.75em;
+}

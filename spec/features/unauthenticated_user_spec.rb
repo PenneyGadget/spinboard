@@ -16,9 +16,9 @@ feature "Unauthenticated user" do
     click_on "Sign Up"
     expect(current_path).to eq(new_user_path)
 
-    fill_in "Email", with: ""
-    fill_in "Password", with: ""
-    fill_in "Password confirmation", with: ""
+    fill_in "Email", with: "penney@email.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
     click_on "Submit"
 
     expect(current_path).to eq(links_path)
