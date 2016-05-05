@@ -15,6 +15,7 @@ feature "Unauthenticated user" do
 
     click_on "Sign Up"
     expect(current_path).to eq(new_user_path)
+    expect(page).to have_content("Create an Account!")
 
     fill_in "Email", with: "penney@email.com"
     fill_in "Password", with: "password"
@@ -22,7 +23,8 @@ feature "Unauthenticated user" do
     click_on "Create Account"
 
     expect(current_path).to eq(links_path)
-    expect(page).to have_content()
+    expect(page).to have_content("Your Links")
+    expect(page).to have_content("Add a New Link")
   end
 
   scenario "password confirmation must match password" do
