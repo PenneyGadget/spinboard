@@ -2,7 +2,6 @@ require "rails_helper"
 
 feature "Authenticated user" do
   scenario "returning user can log in" do
-    pending
     visit root_path
     user = create(:user)
     click_on "Log In"
