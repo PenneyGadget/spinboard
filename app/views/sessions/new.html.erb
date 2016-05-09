@@ -1,7 +1,7 @@
 <div class="container-fluid text-center">
-  <h4 class="page-header">Create an Account!</h4>
+  <h4 class="page-header">Welcome back! Please log in:</h4>
     <div class="form-text">
-      <%= form_for @user do |f| %>
+      <%= form_for(:session, url: login_path) do |f| %>
         <%= f.label :email %>:
         <br>
         <%= f.text_field :email %>
@@ -10,11 +10,7 @@
         <br>
         <%= f.password_field :password %>
         <br><br>
-        <%= f.label :password_confirmation %>:
-        <br>
-        <%= f.password_field :password_confirmation %>
-        <br><br>
-        <%= f.submit "Create Account", class:"submit-btn" %>
+        <%= f.submit "Log In", class:"submit-btn" %>
       <% end %>
     </div>
 </div>
