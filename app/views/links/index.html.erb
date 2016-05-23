@@ -6,7 +6,20 @@
 	</div>
 </div>
 
-<nav class="container-fluid text-center">
-  <h6 class="new-link">Add a New Link:</h6>
-  <h4 class="page-header">Your Links</h4>
-</nav>
+<div class="container-fluid text-center row">
+	<div class="link-form col-md-5">
+		<h6 class="new-link">Add a New Link:</h6><br>
+		<%= form_for @link do |f| %>
+			<%= f.label :title, "title" %>:
+			<%= f.text_field :title %>
+			<br><br>
+			<%= f.label :url, "url" %>:
+			<%= f.text_field :url %>
+			<br><br>
+			<%= f.submit "Submit", class: "btn btn-default link-submit-btn" %>
+		<% end %>
+	</div>
+	<div class="col-md-7">
+		<h4 class="links-header">Your Links:</h4>
+	</div>
+</div>
