@@ -2,6 +2,13 @@ body {
   background-color: #391326;
 }
 
+.alert-info {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.25em;
+  color: #391326;
+  background-color: #e6e6e6;
+}
+
 .welcome, .page-header {
   font-family: 'Shadows Into Light', cursive;
   margin-top: 100px;
@@ -33,16 +40,15 @@ body {
 
 .submit-btn {
   border-radius: 10px;
-  background-color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1em;
   color: #391326;
+  background-color: #e6e6e6;
+  padding: 10px;
 }
 
 .navbar-simple .navbar-inner {
 	background: #602040;
-	// filter: none !important;
-	// box-shadow: 0 2px 15px rgba(0,0,0,0.25);
-	// -moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
-	// -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
