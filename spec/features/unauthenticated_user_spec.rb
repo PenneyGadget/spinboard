@@ -22,6 +22,7 @@ feature "Unauthenticated user" do
     click_on "Create Account"
 
     expect(current_path).to eq(links_path)
+    expect(page).to have_content "Account Created!"
     expect(page).to have_content "Your Links"
     expect(page).to have_content "Add a New Link"
   end
@@ -50,5 +51,9 @@ feature "Unauthenticated user" do
     click_on "Create Account"
 
     expect(page).to have_content "Email has already been taken"
+  end
+
+  scenario "email must be valid" do
+
   end
 end

@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :link do
-    url "MyString"
-    title "MyString"
+    url "https://www.facebook.com/"
+    title "Favorite cat videos"
     read_status false
-    references ""
   end
+
   factory :user do
     email "penney@email.com"
     password "password"

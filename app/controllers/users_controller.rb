@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to links_path
+      flash[:notice] = "Account Created!"
     else
       flash.now[:error] = @user.errors.full_messages.join(", ")
       render :new
