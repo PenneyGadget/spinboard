@@ -3,28 +3,28 @@ body {
 }
 
 .alert-info {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   font-size: 1.25em;
   color: #391326;
   background-color: #e6e6e6;
 }
 
 .welcome, .page-header {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   margin-top: 100px;
   color: #b38600;
   font-size: 5em;
 }
 
 .links-header {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   margin-top: 40px;
   color: #b38600;
   font-size: 5em;
 }
 
 .landing-text {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 2.5em;
   color: #b38600;
   margin-top: 175px;
@@ -39,15 +39,21 @@ body {
   font-size: 2em;
 }
 
-.form-text, .new-link {
-  font-family: 'Open Sans Condensed', sans-serif;
+.form-text {
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.75em;
   color: #b38600;
   margin-bottom: 100px;
 }
 
+.new-link {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.75em;
+  color: #b38600;
+}
+
 .link-form {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.75em;
   color: #b38600;
   margin-top: 100px;
@@ -55,7 +61,7 @@ body {
 
 .submit-btn {
   border-radius: 10px;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   font-size: 1em;
   color: #391326;
   background-color: #e6e6e6;
@@ -71,7 +77,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   font-size: 1.25em;
   color: #391326;
   background-color: #e6e6e6;
@@ -79,8 +85,26 @@ body {
 
 .link-submit-btn {
   margin-top: 10px;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
   font-size: .8em;
   color: #391326;
   background-color: #e6e6e6;
+}
+
+table {
+  background-color: white;
+}
+
+thead {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 2em;
+}
+
+th {
+  text-align: center;
+}
+
+tbody {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.5em;
 }

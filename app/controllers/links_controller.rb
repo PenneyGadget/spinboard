@@ -4,11 +4,13 @@ class LinksController < ApplicationController
   end
 
   def create
-    @link = Link.new(link_params)
+    @link = current_user.links.new(link_params)
     if @link.save
-      # stuff
+      flash[:notice] = "New link saved!"
+      redirect_to links_path
     else
-      #error,render :new
+      flash.now[:error] = "Invalid url, please try again."
+      render :index
     end
   end
 

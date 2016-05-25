@@ -19,7 +19,27 @@
 			<%= f.submit "Submit", class: "btn btn-default link-submit-btn" %>
 		<% end %>
 	</div>
-	<div class="col-md-7">
+	<div class="col-md-6">
 		<h4 class="links-header">Your Links:</h4>
+			<div class="links-table">
+					<table class="table table-bordered table-hover" align="center">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Location</th>
+								<th>Read?</th>
+							</tr>
+						</thead>
+						<% current_user.links.each do |link| %>
+							<tbody>
+								<tr>
+									<td><%= link.title %></td>
+									<td><%= link_to link.url %></td>
+									<td><%= link.read_status %></td>
+								</tr>
+							</tbody>
+						<% end %>
+					</table>
+			</div>
 	</div>
 </div>
