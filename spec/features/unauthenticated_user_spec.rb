@@ -54,6 +54,30 @@ feature "Unauthenticated user" do
   end
 
   scenario "email must be valid" do
+    visit root_path
+    create(:user)
 
+    click_on "Sign Up"
+
+    fill_in "Email", with: "penney@email..com"
+    fill_in "Password", with: "newpassword"
+    fill_in "Password confirmation", with: "newpassword"
+    click_on "Create Account"
+
+    expect(page).to have_content "Email is invalid"
+
+    fill_in "Email", with: "bob"
+    fill_in "Password", with: "newpassword"
+    fill_in "Password confirmation", with: "newpassword"
+    click_on "Create Account"
+
+    expect(page).to have_content "Email is invalid"
+
+    fill_in "Email", with: "penney@email."
+    fill_in "Password", with: "newpassword"
+    fill_in "Password confirmation", with: "newpassword"
+    click_on "Create Account"
+
+    expect(page).to have_content "Email is invalid"
   end
 end
