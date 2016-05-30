@@ -11,6 +11,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'pg'
 gem 'email_validator', require: 'email_validator/strict'
+gem 'validate_url'
 
 group :development, :test do
   gem 'byebug'

@@ -31,6 +31,7 @@
 							</tr>
 						</thead>
 						<% current_user.links.each do |link| %>
+							<% if link.valid? %>
 							<tbody>
 								<tr>
 									<td><%= link.title %></td>
@@ -38,6 +39,7 @@
 									<td><%= link.read_status %></td>
 								</tr>
 							</tbody>
+							<% end %>
 						<% end %>
 					</table>
 			</div>
