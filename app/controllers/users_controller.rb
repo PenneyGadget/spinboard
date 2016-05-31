@@ -10,8 +10,11 @@ class UsersController < ApplicationController
       redirect_to links_path
       flash[:notice] = "Account Created!"
     else
-      flash.now[:error] = @user.errors.full_messages.join(", ")
-      render :new
+      flash[:error] = @user.errors.full_messages.join(", ")
+      redirect_to new_user_path
+      #I changed this from a flash.now and a render :new because, for some
+      #reason, when this errors it renders wonky CSS. With this approach the
+      #CSS stays in place, however the form now clears itself completely upon error
     end
   end
 

@@ -10,8 +10,8 @@ class LinksController < ApplicationController
       flash[:notice] = "New link saved!"
       redirect_to links_path
     else
-      flash.now[:error] = "Invalid url, please try again."
-      render :index
+      flash[:error] = "Invalid url, please try again."
+      redirect_to links_path
     end
   end
 
