@@ -13,6 +13,6 @@ feature "New user must have unique email" do
     click_on "Create Account"
 
     expect(page).to have_content "Email has already been taken"
-    expect(current_path).to eq(users_path)
+    expect(current_path).to eq(new_user_path)
   end
 end
