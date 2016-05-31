@@ -16,6 +16,7 @@ feature "Unauthenticated user" do
     expect(current_path).to eq(new_user_path)
     expect(page).to have_content "Create an Account!"
 
+    fill_in "Name", with: "Penners"
     fill_in "Email", with: "penney@email.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
@@ -31,6 +32,7 @@ feature "Unauthenticated user" do
     visit root_path
     click_on "Sign Up"
 
+    fill_in "Name", with: "Penners"
     fill_in "Email", with: "penney@email.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "pass"
