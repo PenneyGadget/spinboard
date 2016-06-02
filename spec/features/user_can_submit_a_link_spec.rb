@@ -15,6 +15,15 @@ feature "User submits a new link" do
     expect(page).to have_content "http://youshouldgohere.com/"
     expect(page).to have_content "Read?"
     expect(page).to have_content "false"
+
+    fill_in "title", with: "The Google"
+    fill_in "url", with: "http://www.google.com/"
+    click_on "Submit"
+
+    expect(page).to have_content "Adventure time!"
+    expect(page).to have_content "http://youshouldgohere.com/"
+    expect(page).to have_content "The Google"
+    expect(page).to have_content "http://www.google.com/"
   end
 
   scenario "invalid links are rejected" do
@@ -27,8 +36,8 @@ feature "User submits a new link" do
 
     expect(current_path).to eq(links_path)
     expect(page).to have_content "Invalid url, please try again."
-    # expect(page).to_not have_content "Adventure time!"
-    # expect(page).to_not have_content "sdjflkdjflkj"
+    expect(page).to_not have_content "Adventure time!"
+    expect(page).to_not have_content "sdjflkdjflkj"
 
     fill_in "title", with: "Stuff"
     fill_in "url", with: "www.abcxyz"
@@ -36,8 +45,8 @@ feature "User submits a new link" do
 
     expect(current_path).to eq(links_path)
     expect(page).to have_content "Invalid url, please try again."
-    # expect(page).to_not have_content "Stuff"
-    # expect(page).to_not have_content "www.abcxyz"
+    expect(page).to_not have_content "Stuff"
+    expect(page).to_not have_content "www.abcxyz"
 
     fill_in "title", with: "More stuff"
     fill_in "url", with: "www.oops."
@@ -45,7 +54,7 @@ feature "User submits a new link" do
 
     expect(current_path).to eq(links_path)
     expect(page).to have_content "Invalid url, please try again."
-    # expect(page).to_not have_content "More stuff"
-    # expect(page).to_not have_content "www.oops."
+    expect(page).to_not have_content "More stuff"
+    expect(page).to_not have_content "www.oops."
   end
 end
