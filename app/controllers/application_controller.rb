@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    current_user != nil 
+    current_user != nil
+  end
+
+  def authorize!
+    redirect_to root_path unless current_user
   end
 end
